@@ -1,6 +1,7 @@
 
 import './App.css'
 import LoginForm from './pages/LoginForm';
+import SignupForm from './pages/SignupForm';
 
 const loginFormConfig = [
   { label: "Username", type: "text", name: "username" },
@@ -15,10 +16,16 @@ const App = () => {
   };
 
   return (
+    <>
     <div className='loginform'>
       <h1>Login Form</h1>
       <LoginForm config={loginFormConfig} onSubmit={handleLoginSubmit} />
     </div>
+    <div className='loginform'>
+      <h2 >Signup Form</h2>
+      <SignupForm/>
+    </div>
+    </>
   );
 };
 
